@@ -1,0 +1,14 @@
+/* Wrapper for the error state */
+.error-state {
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+  }
+  
+  /* Error state image styling */
+  .error-state .img {
+    margin: 0 auto;
+  }
+  

@@ -1,0 +1,54 @@
+/* Wrapper Styling for Sticky Header */
+.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Added a slight shadow for better visibility */
+  }
+  
+  /* Header Styling */
+  .header {
+    height: 11rem;
+    filter: blur(4px);  /* Slightly reduced the blur for better image visibility */
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background: url('../../public/images/newsportal.webp');
+    transition: filter 0.3s ease; /* Smooth transition when blur effect changes */
+  }
+  
+  /* Heading Styling */
+  .heading {
+    color: #2f3337;
+    font-size: 2rem;  /* Added a base font size */
+    font-weight: bold;  /* For better emphasis */
+    margin: 0.5rem 0;   /* Spacing for heading */
+  }
+  
+  /* Content Styling */
+  .content {
+    position: absolute;
+    padding-top: 0.5rem;
+    width: 100%;
+    top: 0;
+    color: #fff;  /* Ensures readability on background image */
+  }
+  
+  /* Mobile and Tablet Responsive Design */
+  @media (max-width: 1024px) {
+    .header {
+      height: 8rem;  /* Reduce header height on mobile for better space usage */
+    }
+  
+    .heading {
+      font-size: 1.5rem;  /* Smaller font size for mobile */
+    }
+  
+    .content {
+        padding: 0.5rem 1rem;  /* Adjust padding on small screens */
+        width: -webkit-fill-available;
+    }
+  }
+  

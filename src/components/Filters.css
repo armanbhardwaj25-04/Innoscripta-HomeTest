@@ -1,0 +1,77 @@
+/* Main Container */
+.container {
+  padding: 10px 0;
+  position: relative;
+  height: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: absolute;
+  right: 0;
+  align-items: center;
+}
+
+/* Select and Input Fields */
+.filters select, 
+.filters input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filters select:focus, 
+.filters input:focus {
+  border-color: #007BFF;
+  background-color: #f1f9ff;
+  outline: none;
+}
+
+/* Reset Button */
+.reset-btn {
+  padding: 8px 15px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+.reset-btn:focus {
+  outline: 2px solid #003366;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters select,
+  .filters input {
+    width: 100%; /* Make the select and input fields full width on small screens */
+    margin-bottom: 10px;
+  }
+
+  .reset-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+

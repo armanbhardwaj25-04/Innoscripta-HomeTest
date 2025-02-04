@@ -1,0 +1,153 @@
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: #1e3a8a;
+  color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 10px 10rem;
+}
+
+/* Navigation Items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  background: #1e3a8a;
+  color: #fff;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Dropdown Section */
+.dropdown-section {
+  position: relative;
+  padding: 20px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Nested Menu */
+.nested-menu {
+  position: absolute;
+  left: 11rem;
+  top: 0;
+  background: #1e3a8a;
+  width: 160px;
+  padding: 18px 8px;
+  display: none;
+  list-style-type: none;
+}
+
+.dropdown-section:hover .nested-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nested Items */
+.nested-item {
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nested-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling */
+.icon {
+  color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+  .nav-item {
+    font-size: 14px;
+    justify-content: flex-start;
+  }
+
+  .dropdown-title {
+    font-size: 12px;
+  }
+
+  .nested-item {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    padding: 10px 2rem;  
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    padding: 10px 6rem;  
+  }
+}
+
+/* Additional Styles for Larger Screens (1440px and above) */
+@media (min-width: 1440px) {
+  .sidebar {
+    padding: 10px 12rem; 
+  }
+}

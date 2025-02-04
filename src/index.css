@@ -1,0 +1,56 @@
+/* Global Body Styling */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif; 
+}
+
+/* Wrapper for Content */
+.contentWrapper {
+  padding: 0 10rem; 
+}
+
+/* Center-align Headings */
+h1 {
+  text-align: center;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  /* Article Card Styling */
+  .article-card {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .input, .select {
+    width: 100%;
+  }
+
+  .contentWrapper {
+    padding: 0 2rem;  
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    padding: 0 2rem;  
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    padding: 0 6rem;  
+  }
+}
+
+/* Additional Styles for Larger Screens (1440px and above) */
+@media (min-width: 1440px) {
+  .contentWrapper {
+    padding: 0 12rem; 
+  }
+}

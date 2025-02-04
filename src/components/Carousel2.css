@@ -1,0 +1,92 @@
+/* Wrapper for the carousel */
+.sources-carousel {
+  margin: auto;
+  text-align: center;
+  padding: 20px 0; /* Added padding for consistent spacing */
+
+  /* Heading */
+  .carousel-heading {
+    font-size: 1.5rem; /* Use rem for scalable typography */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  /* Swiper Container */
+  .swiper-container {
+    padding: 10px 0;
+  }
+
+  /* Slide Styling */
+  .source-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Circular Images */
+  .source-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  }
+
+  /* Hover Effect for Image */
+  .source-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow on hover */
+  }
+
+  /* Source Name */
+  .source-name {
+    margin-top: 8px;
+    font-size: 0.875rem; /* Use rem for scalable typography */
+    color: #333;
+    text-transform: capitalize; /* Added capitalization for consistent appearance */
+  }
+
+  /* Swiper Navigation Arrows */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #002855 !important;
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    color: #ff6347; /* Hover effect for arrows */
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 5rem;
+  color: white;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .carousel-heading {
+      font-size: 1.25rem; /* Slightly smaller heading on smaller screens */
+    }
+
+    .source-name {
+      font-size: 0.75rem; /* Adjust text size for smaller screens */
+    }
+  }
+}

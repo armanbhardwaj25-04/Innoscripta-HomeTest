@@ -1,0 +1,123 @@
+/* Global Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Grid Layout for Articles */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+/* Card Container */
+.article-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Hover Effect on Card */
+.article-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: underline;
+}
+
+/* Badge on Article Card */
+.article-card__badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #032265;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px 0 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Article Image */
+.article-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #e0e0e0;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Article Content */
+.article-card__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Article Title */
+.article-card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+/* Article Description */
+.article-card__description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Read More Link */
+.article-card__read-more {
+  font-size: 0.95rem;
+  color: #007BFF;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.article-card__read-more:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .article-card {
+    padding: 0.8rem;
+  }
+
+  .article-card__title {
+    font-size: 1.1rem;
+  }
+
+  .article-card__description {
+    font-size: 0.9rem;
+  }
+
+  .article-card__read-more {
+    font-size: 0.85rem;
+  }
+}
