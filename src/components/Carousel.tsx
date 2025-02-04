@@ -39,7 +39,7 @@ const RectangularCarousel: React.FC<{ articles: Array<Article> }> = React.memo((
         spaceBetween={30}
         slidesPerView={1}
         navigation
-        autoplay={false}
+        autoplay={{ delay: 2500, pauseOnMouseEnter: true, disableOnInteraction: false }}
         loop
         className="swiper-container"
       >
