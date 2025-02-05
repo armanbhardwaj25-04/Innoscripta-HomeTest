@@ -50,7 +50,7 @@ const DropdownItem = React.memo(
   }: {
     title: string;
     icon: any;
-    items: string[];
+    items: any[];
     setDropdownOpen: React.Dispatch<React.SetStateAction<string | null>>;
   }) => {
     const [nestedOpen, setNestedOpen] = useState(false);
@@ -68,12 +68,12 @@ const DropdownItem = React.memo(
           <ul className="nested-menu">
             {items.map((item) => (
               <Link
-                key={item}
+                key={item.name}
                 className="nested-item"
-                to={`/${title.toLowerCase()}/${item.toLowerCase()}`}
+                to={`/${title.toLowerCase()}/${item.name.toLowerCase()}`}
                 onClick={() => setDropdownOpen(null)} // Close dropdown on click
               >
-                <li>{item}</li>
+                <li>{item.name}</li>
               </Link>
             ))}
           </ul>

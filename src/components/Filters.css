@@ -1,9 +1,11 @@
 /* Main Container */
 .container {
   padding: 10px 0;
-  position: relative;
-  height: 40px;
+  height: auto;
+  width: auto;
   font-family: Arial, sans-serif;
+  justify-content: end;
+  display: flex;
 }
 
 /* Filters Section */
@@ -12,7 +14,6 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 20px;
-  position: absolute;
   right: 0;
   align-items: center;
 }
@@ -54,24 +55,5 @@
 
 .reset-btn:focus {
   outline: 2px solid #003366;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .filters {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .filters select,
-  .filters input {
-    width: 100%; /* Make the select and input fields full width on small screens */
-    margin-bottom: 10px;
-  }
-
-  .reset-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
 }
 

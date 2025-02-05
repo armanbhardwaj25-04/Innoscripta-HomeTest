@@ -11,7 +11,7 @@
   
   /* Header Styling */
   .header {
-    height: 11rem;
+    height: 6rem;
     filter: blur(4px);  /* Slightly reduced the blur for better image visibility */
     background-position: center;
     background-size: cover; /* Ensures the image covers the entire area */
@@ -38,10 +38,6 @@
   
   /* Mobile and Tablet Responsive Design */
   @media (max-width: 1024px) {
-    .header {
-      height: 8rem;  /* Reduce header height on mobile for better space usage */
-    }
-  
     .heading {
       font-size: 1.5rem;  /* Smaller font size for mobile */
     }
@@ -49,6 +45,12 @@
     .content {
         padding: 0.5rem 1rem;  /* Adjust padding on small screens */
         width: -webkit-fill-available;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1rem;
     }
   }
   

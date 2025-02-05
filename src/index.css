@@ -47,10 +47,3 @@ h1 {
     padding: 0 6rem;  
   }
 }
-
-/* Additional Styles for Larger Screens (1440px and above) */
-@media (min-width: 1440px) {
-  .contentWrapper {
-    padding: 0 12rem; 
-  }
-}

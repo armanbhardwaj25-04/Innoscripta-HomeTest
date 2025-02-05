@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import './Header.css'
 
 const Heading = () => {
   const { domain, category, q: query } = useParams(); // Extracts the dynamic part from the URL
@@ -9,7 +10,7 @@ const Heading = () => {
     category ? `Category: ${category}` :
     query ? `Search: ${query}` : '';
 
-  return <h1>{heading}</h1>;
+  return <h1 className="heading">{heading}</h1>;
 };
 
 export default Heading;

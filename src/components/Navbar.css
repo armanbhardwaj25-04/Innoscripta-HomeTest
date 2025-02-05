@@ -11,6 +11,7 @@
   flex-direction: row;
   gap: 2rem;
   padding: 10px 10rem;
+  align-items: center;
 }
 
 /* Navigation Items */
@@ -142,12 +143,5 @@
 @media (min-width: 1024px) {
   .sidebar {
     padding: 10px 6rem;  
-  }
-}
-
-/* Additional Styles for Larger Screens (1440px and above) */
-@media (min-width: 1440px) {
-  .sidebar {
-    padding: 10px 12rem; 
   }
 }

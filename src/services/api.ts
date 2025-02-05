@@ -41,11 +41,12 @@ export const fetchCarouselArticles = async () => {
   return response.response.docs
     .filter((item: { multimedia: { url: string }[] }) => item.multimedia?.[0]?.url)
     .map(
-      (item: { multimedia: { url: string }[]; abstract: string; lead_paragraph: string }, index: number) => ({
+      (item: { multimedia: { url: string }[]; abstract: string; lead_paragraph: string, web_url: string }, index: number) => ({
         id: index,
         imageUrl: `${NYT_DOMAIN}${item.multimedia[0].url}`,
         title: item.abstract,
         description: item.lead_paragraph,
+        url: item.web_url,
       })
     );
 };

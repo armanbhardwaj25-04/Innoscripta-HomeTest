@@ -34,8 +34,8 @@ const Filters: React.FC<FiltersProps> = ({ setFilters, filters, showFilters, dom
         {!category && (
           <select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
             {NEWS_CATEGORIES_FILTER.map((item) => (
-              <option key={item} value={item}>
-                {item}
+              <option key={item.name} value={item.logo}>
+                {item.name}
               </option>
             ))}
           </select>
@@ -44,8 +44,8 @@ const Filters: React.FC<FiltersProps> = ({ setFilters, filters, showFilters, dom
         {!domain && (
           <select value={source} onChange={(e) => setSource(e.target.value)}>
             {NEWS_SOURCES_FILTER.map((item) => (
-              <option key={item} value={item}>
-                {item}
+              <option key={item.name} value={item.name}>
+                {item.name}
               </option>
             ))}
           </select>
