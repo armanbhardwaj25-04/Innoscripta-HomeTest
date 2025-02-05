@@ -1,11 +1,19 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx", // Entry point for the app
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      // other minimizers (like TerserPlugin for JS)
+    ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"], // Resolve these file types
