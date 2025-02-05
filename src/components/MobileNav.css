@@ -1,0 +1,85 @@
+/* Overlay Styles */
+.mobile-nav {
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: #f9fafb;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .overlay.active {
+    transform: translateX(0);
+  }
+  
+  .overlay-content {
+    /* padding: 20px; */
+    text-align: left;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    right: 15px;
+    top: 10px;
+    color: #333;
+  }
+
+  .nav-header-wrap {
+    display: flex;
+    background: #fff;
+    padding: 1rem 10px;
+    border: 1px solid #dadcdf;
+    justify-content: space-between;
+  }
+  
+  .overlay-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 12px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #dadcdf;
+    transition: background 0.2s;
+  }
+
+  .overlay-menu a {
+    text-decoration: none;
+    color: #000;
+    width: auto;
+
+  }
+  
+  .overlay-item:hover {
+    background: #f4f4f4;
+  }
+  
+  .back-btn {
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #000;
+  }
+  
+  /* Hide overlay on desktop */
+  @media (min-width: 768px) {
+    .overlay {
+      display: none !important;
+    }
+  }
+}
+  
