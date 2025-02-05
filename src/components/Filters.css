@@ -19,19 +19,21 @@
 }
 
 /* Select and Input Fields */
-.filters select, 
+.filters select,
 .filters input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
   width: 150px;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.filters select:focus, 
+.filters select:focus,
 .filters input:focus {
-  border-color: #007BFF;
+  border-color: #007bff;
   background-color: #f1f9ff;
   outline: none;
 }
@@ -45,7 +47,9 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .reset-btn:hover {
@@ -56,4 +60,3 @@
 .reset-btn:focus {
   outline: 2px solid #003366;
 }
-

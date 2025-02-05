@@ -34,7 +34,9 @@
     object-fit: cover;
     border: 2px solid #ddd;
     padding: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease; /* Added box-shadow transition */
   }
 
   .no-image {
@@ -75,20 +77,19 @@
   }
 
   .swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 5rem;
-  color: white;
-}
+  .swiper-button-prev {
+    position: absolute;
+    top: 5rem;
+    color: white;
+  }
 
-.swiper-button-next {
-  right: 0;
-}
+  .swiper-button-next {
+    right: 0;
+  }
 
-.swiper-button-prev {
-  left: 0;
-}
-
+  .swiper-button-prev {
+    left: 0;
+  }
 
   /* Responsiveness */
   @media (max-width: 768px) {

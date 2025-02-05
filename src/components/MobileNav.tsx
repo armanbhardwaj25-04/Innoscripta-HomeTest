@@ -25,7 +25,7 @@ const MobileOverlay = () => {
   const toggleOverlay = () => {
     if (isMobile) {
       setIsOpen(!isOpen);
-      setSelectedCategory('Personalized');
+      setSelectedCategory("Personalized");
       setCurrentLevel("L1"); // Always reset to L1 when opening
     }
   };
@@ -36,7 +36,7 @@ const MobileOverlay = () => {
   };
 
   const goBack = () => {
-    setSelectedCategory('Personalized');
+    setSelectedCategory("Personalized");
     setCurrentLevel((prev) => (prev === "L3" ? "L2" : "L1"));
   };
 
@@ -55,15 +55,18 @@ const MobileOverlay = () => {
           <div className="overlay-content">
             <div className="nav-header-wrap">
               {currentLevel === "L2" ? (
-                <button className="back-btn" onClick={goBack}><ArrowLeft size={20} /></button>
+                <button className="back-btn" onClick={goBack}>
+                  <ArrowLeft size={20} />
+                </button>
               ) : null}
               <h4 className="heading">{selectedCategory}</h4>
-              <button className="close-btn" onClick={toggleOverlay}>&times;</button>
+              <button className="close-btn" onClick={toggleOverlay}>
+                &times;
+              </button>
             </div>
             {/* Level 1 (Main Menu) */}
             {currentLevel === "L1" && (
               <div className="overlay-menu">
-
                 {NAV_DROPDOWN_DATA.map((item) => (
                   <button
                     key={item.title}

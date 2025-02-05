@@ -23,7 +23,6 @@ const Navbar = () => {
         <Link to="/" className="nav-item">
           <Home size={20} className="icon" /> Home
         </Link>
-
         <div
           className="dropdown"
           onMouseEnter={() => setDropdownOpen("personalized")}
@@ -56,7 +55,7 @@ const Navbar = () => {
         </Link>
         <MobileOverlay />
       </div>
-      </nav>
+    </nav>
   );
 };
 
@@ -99,7 +98,7 @@ const DropdownItem = React.memo(
         )}
       </div>
     );
-  }
+  },
 );
 
 export default Navbar;

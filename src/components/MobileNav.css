@@ -1,7 +1,6 @@
 /* Overlay Styles */
 .mobile-nav {
-
-.overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,16 +12,16 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .overlay.active {
     transform: translateX(0);
   }
-  
+
   .overlay-content {
     /* padding: 20px; */
     text-align: left;
   }
-  
+
   .close-btn {
     background: none;
     border: none;
@@ -40,7 +39,7 @@
     border: 1px solid #dadcdf;
     justify-content: space-between;
   }
-  
+
   .overlay-item {
     display: flex;
     justify-content: space-between;
@@ -60,13 +59,12 @@
     text-decoration: none;
     color: #000;
     width: auto;
-
   }
-  
+
   .overlay-item:hover {
     background: #f4f4f4;
   }
-  
+
   .back-btn {
     font-size: 16px;
     cursor: pointer;
@@ -74,7 +72,7 @@
     border: none;
     color: #000;
   }
-  
+
   /* Hide overlay on desktop */
   @media (min-width: 768px) {
     .overlay {
@@ -82,4 +80,3 @@
     }
   }
 }
-  

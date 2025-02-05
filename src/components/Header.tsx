@@ -1,9 +1,8 @@
-import React from 'react';
-import { APP_HEADING } from '../constants/index.js';
-import SearchBar from './SearchBar'
-import Navbar from './NavBar';
-import './Header.css';
-
+import React from "react";
+import { APP_HEADING } from "../constants/index.js";
+import SearchBar from "./SearchBar";
+import Navbar from "./NavBar";
+import "./Header.css";
 
 const Header: React.FC = () => {
   return (

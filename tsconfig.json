@@ -1,26 +1,21 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["dom", "es2015"],
-      "allowJs": true,
-      "jsx": "react-jsx",  // For React 17 and newer
-      "moduleResolution": "node",  // Resolves modules the same way Node.js does
-      "esModuleInterop": true,
-      "resolveJsonModule": true,  // If you want to import JSON files
-      "module": "esnext",  // Modern JavaScript module system
-      "strict": true,  // Strict type checking
-      "skipLibCheck": true,  // Skip library checks for faster build times
-      "forceConsistentCasingInFileNames": true,  // Ensures consistent file casing
-      "baseUrl": ".",  // Helps resolve relative paths
-      "paths": {
-        "@components/*": ["src/components/*"]
-      }
-    },
-    "include": [
-      "src/**/*"
-    ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "es2015"],
+    "allowJs": true,
+    "jsx": "react-jsx", // For React 17 and newer
+    "moduleResolution": "node", // Resolves modules the same way Node.js does
+    "esModuleInterop": true,
+    "resolveJsonModule": true, // If you want to import JSON files
+    "module": "esnext", // Modern JavaScript module system
+    "strict": true, // Strict type checking
+    "skipLibCheck": true, // Skip library checks for faster build times
+    "forceConsistentCasingInFileNames": true, // Ensures consistent file casing
+    "baseUrl": ".", // Helps resolve relative paths
+    "paths": {
+      "@components/*": ["src/components/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

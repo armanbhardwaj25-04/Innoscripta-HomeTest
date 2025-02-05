@@ -20,7 +20,9 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   cursor: pointer;
   text-decoration: none;
   display: flex;
@@ -87,7 +89,7 @@ body {
 /* Read More Link */
 .article-card__read-more {
   font-size: 0.95rem;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: underline;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -99,7 +101,6 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-
   .article-card {
     padding: 0.8rem;
     margin: 0;

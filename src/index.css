@@ -5,12 +5,12 @@ body {
   gap: 4rem;
   min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif; 
+  font-family: Arial, sans-serif;
 }
 
 /* Wrapper for Content */
 .contentWrapper {
-  padding: 0 10rem; 
+  padding: 0 10rem;
 }
 
 /* Center-align Headings */
@@ -27,23 +27,24 @@ h1 {
     font-size: 14px;
   }
 
-  .input, .select {
+  .input,
+  .select {
     width: 100%;
   }
 
   .contentWrapper {
-    padding: 0 2rem;  
+    padding: 0 2rem;
   }
 }
 
 @media (max-width: 1024px) {
   .contentWrapper {
-    padding: 0 2rem;  
+    padding: 0 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .contentWrapper {
-    padding: 0 6rem;  
+    padding: 0 6rem;
   }
 }

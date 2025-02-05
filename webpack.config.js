@@ -1,29 +1,29 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.tsx',  // Entry point for the app
+  entry: "./src/index.tsx", // Entry point for the app
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],  // Resolve these file types
+    extensions: [".tsx", ".ts", ".js", ".jsx"], // Resolve these file types
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,  // Transpile TypeScript files
-        use: 'ts-loader',
+        test: /\.(ts|tsx)$/, // Transpile TypeScript files
+        use: "ts-loader",
         exclude: /node_modules/,
       },
       {
-        test: /\.js$/,  // Use Babel to transpile JavaScript files
+        test: /\.js$/, // Use Babel to transpile JavaScript files
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
@@ -31,13 +31,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',  // Path to your HTML template
+      template: "./public/index.html", // Path to your HTML template
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    port: 3000,  // Port for the dev server
-    hot: true,  // Hot module reloading
+    contentBase: path.join(__dirname, "dist"),
+    port: 3000, // Port for the dev server
+    hot: true, // Hot module reloading
   },
-  mode: 'development',  // Change to 'production' for optimized builds
+  mode: "development", // Change to 'production' for optimized builds
 };

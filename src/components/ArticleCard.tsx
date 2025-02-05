@@ -22,10 +22,14 @@ interface Article {
 interface ArticleCardProps {
   articles: Article[];
   isLoading: boolean;
-  error: string,
+  error: string;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ articles, isLoading, error }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({
+  articles,
+  isLoading,
+  error,
+}) => {
   if (isLoading) return <ArticleSkeletons />;
 
   return articles.length > 0 ? (
@@ -33,12 +37,25 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ articles, isLoading, error })
       {articles.map((article, index) => {
         const title = article.title || article.abstract || "Untitled";
         const link = article.link || article.web_url || "#";
-        const badge = article.source_name || article?.source?.name || "Unknown Source";
-        const description = article.description || article.lead_paragraph || "No description available.";
-        const imageUrl = article.image_url || article?.urlToImage || article?.multimedia?.[0]?.url;
+        const badge =
+          article.source_name || article?.source?.name || "Unknown Source";
+        const description =
+          article.description ||
+          article.lead_paragraph ||
+          "No description available.";
+        const imageUrl =
+          article.image_url ||
+          article?.urlToImage ||
+          article?.multimedia?.[0]?.url;
 
         return imageUrl ? (
-          <a href={link} key={index} className="article-card" target="_blank" rel="noopener noreferrer">
+          <a
+            href={link}
+            key={index}
+            className="article-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {badge && <span className="article-card__badge">{badge}</span>}
             <img
               src={imageUrl}
@@ -48,7 +65,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ articles, isLoading, error })
             />
             <div className="article-card__content">
               <h3 className="article-card__title">{title}</h3>
-              {description && <p className="article-card__description">{`${description.slice(0, 100)}...`}</p>}
+              {description && (
+                <p className="article-card__description">{`${description.slice(0, 100)}...`}</p>
+              )}
               <p className="article-card__read-more">Read More</p>
             </div>
           </a>

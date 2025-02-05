@@ -20,7 +20,11 @@ const Content: React.FC = () => {
   const [error, setError] = useState<string>("");
   const [filters, setFilters] = useState<Record<string, any>>({}); // Ensuring filters is an object
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const params = useParams<{ domain?: string; category?: string; q?: string }>();
+  const params = useParams<{
+    domain?: string;
+    category?: string;
+    q?: string;
+  }>();
   const { domain, category, q: query } = params;
 
   useEffect(() => {
@@ -45,7 +49,13 @@ const Content: React.FC = () => {
     <div className="contentWrapper">
       <Suspense fallback={<NoArticleFound error={error} />}>
         <Heading />
-        <Filters showFilters={data.length > 0} filters={filters} setFilters={setFilters} error={error} {...params} />
+        <Filters
+          showFilters={data.length > 0}
+          filters={filters}
+          setFilters={setFilters}
+          error={error}
+          {...params}
+        />
         <ArticleCard error={error} articles={data} isLoading={isLoading} />
       </Suspense>
     </div>

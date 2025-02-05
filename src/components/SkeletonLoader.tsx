@@ -13,8 +13,7 @@ const SkeletonLoader = () => {
         <div className="skeleton-filter"></div>
         <div className="skeleton-filter"></div>
       </div>
-     {ArticleSkeletons()}
-
+      {ArticleSkeletons()}
     </div>
   );
 };
@@ -31,9 +30,9 @@ export const ArticleSkeletons = () => {
             <div className="skeleton-text"></div>
           </div>
         ))}
-  </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default SkeletonLoader;

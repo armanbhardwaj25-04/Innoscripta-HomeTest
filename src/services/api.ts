@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FALLBACK_CAROUSEL, NYT_DOMAIN } from "../constants";
+import { NYT_DOMAIN } from "../constants";
 import { SetStateAction } from "react";
 import { Params } from "react-router-dom";
 
@@ -39,15 +39,25 @@ export const fetchCarouselArticles = async () => {
   if (!response?.response?.docs) return [];
 
   return response.response.docs
-    .filter((item: { multimedia: { url: string }[] }) => item.multimedia?.[0]?.url)
+    .filter(
+      (item: { multimedia: { url: string }[] }) => item.multimedia?.[0]?.url,
+    )
     .map(
-      (item: { multimedia: { url: string }[]; abstract: string; lead_paragraph: string, web_url: string }, index: number) => ({
+      (
+        item: {
+          multimedia: { url: string }[];
+          abstract: string;
+          lead_paragraph: string;
+          web_url: string;
+        },
+        index: number,
+      ) => ({
         id: index,
         imageUrl: `${NYT_DOMAIN}${item.multimedia[0].url}`,
         title: item.abstract,
         description: item.lead_paragraph,
         url: item.web_url,
-      })
+      }),
     );
 };
 
@@ -55,7 +65,7 @@ export const fetchCarouselArticles = async () => {
 export const fetchArticles = async (
   setIsLoading: (value: SetStateAction<boolean>) => void,
   params: Readonly<Params<string>>,
-  filters: Record<string, any>
+  filters: Record<string, any>,
 ) => {
   let queryParams = { ...params, ...filters };
   if (!queryParams.q) queryParams.q = "world"; // Default to "world" if no query
@@ -64,8 +74,14 @@ export const fetchArticles = async (
 
   // Fetch data from multiple sources
   const [newsApiResponse, openNewsResponse] = await Promise.all([
-    fetchData(API_ENDPOINTS.NEWS_DATA, { apiKey: API_KEYS.NEWS_API, ...queryParams }),
-    fetchData(API_ENDPOINTS.OPEN_NEWS, { apiKey: API_KEYS.OPEN_NEWS_API, ...queryParams }),
+    fetchData(API_ENDPOINTS.NEWS_DATA, {
+      apiKey: API_KEYS.NEWS_API,
+      ...queryParams,
+    }),
+    fetchData(API_ENDPOINTS.OPEN_NEWS, {
+      apiKey: API_KEYS.OPEN_NEWS_API,
+      ...queryParams,
+    }),
   ]);
 
   setIsLoading?.(false);

@@ -16,7 +16,7 @@
 
 /* Footer Columns */
 .footer-column {
-  flex-basis: 22%;  /* Adjusts initial size of each column */
+  flex-basis: 22%; /* Adjusts initial size of each column */
   min-width: 200px;
   margin-bottom: 20px;
 }
@@ -41,7 +41,9 @@
   color: #ddd;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
 }
 
 .footer-column ul li a:hover {
@@ -65,7 +67,7 @@
   }
 
   .footer-column {
-    flex-basis: 100%;  /* Full width for columns on mobile */
+    flex-basis: 100%; /* Full width for columns on mobile */
   }
 
   .footer-column h3 {

@@ -74,7 +74,10 @@ const Footer: React.FC = () => {
         <FooterColumn title="MORE WAYS TO SHOP" items={shopItems} />
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} News Aggregator. All Rights Reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} News Aggregator. All Rights
+          Reserved.
+        </p>
       </div>
     </footer>
   );

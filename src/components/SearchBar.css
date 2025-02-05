@@ -1,7 +1,7 @@
 /* General Styles */
 header {
   font-family: Arial, sans-serif;
-  padding: 1rem 0 3rem;  /* No need for padding reset */
+  padding: 1rem 0 3rem; /* No need for padding reset */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,11 @@ header {
 }
 
 .search-input:focus {
-  border-color: #4A90E2;
+  border-color: #4a90e2;
 }
 
 .search-button {
-  background-color: #4A90E2;
+  background-color: #4a90e2;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -47,7 +47,7 @@ header {
 }
 
 .search-button:hover {
-  background-color: #357ABD;
+  background-color: #357abd;
 }
 
 .search-button:focus {

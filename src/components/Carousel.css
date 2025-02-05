@@ -58,7 +58,7 @@
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out;
   }
 
   /* Paragraph */
@@ -91,7 +91,6 @@
     color: #ff6347; /* Change arrow color on hover */
   }
 
-
   @media (max-width: 1280px) {
     .slide-content {
       margin: 0 40px;
@@ -100,8 +99,8 @@
 
   @media (max-width: 768px) {
     .slide-content h2 {
-    font-size: 1rem;
-    line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.6;
     }
     .slide-content p {
       font-size: 0.8rem;

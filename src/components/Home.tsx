@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import NewsCarousel from "./Carousel";
 import { fetchCarouselArticles } from "../services/api";
-import { 
+import {
   CATEGORIES_HEADING,
-  CIRCULAR_CAROUSEL_TYPE, 
-  FALLBACK_CAROUSEL, 
-  NEWS_CATEGORIES_FILTER, 
-  RECTANGLE_CAROUSEL_TYPE, 
-  SOURCES_HEADING, 
-  SOURCES_LOGOS 
+  CIRCULAR_CAROUSEL_TYPE,
+  FALLBACK_CAROUSEL,
+  NEWS_CATEGORIES_FILTER,
+  RECTANGLE_CAROUSEL_TYPE,
+  SOURCES_HEADING,
+  SOURCES_LOGOS,
 } from "../constants";
 
 import "./Content.css";
@@ -18,11 +18,12 @@ interface Article {
   title: string;
   imageUrl: string;
   description: string;
-  url: string
+  url: string;
 }
 
 const Home: React.FC = () => {
-  const [carouselData, setCarouselData] = useState<Article[]>(FALLBACK_CAROUSEL);
+  const [carouselData, setCarouselData] =
+    useState<Article[]>(FALLBACK_CAROUSEL);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,8 +45,17 @@ const Home: React.FC = () => {
       <NewsCarousel version={RECTANGLE_CAROUSEL_TYPE} articles={carouselData} />
 
       {/* Circular Carousels */}
-      <NewsCarousel version={CIRCULAR_CAROUSEL_TYPE} data={SOURCES_LOGOS} heading={SOURCES_HEADING} />
-      <NewsCarousel version={CIRCULAR_CAROUSEL_TYPE} data={NEWS_CATEGORIES_FILTER} heading={CATEGORIES_HEADING} noImage={true}/>
+      <NewsCarousel
+        version={CIRCULAR_CAROUSEL_TYPE}
+        data={SOURCES_LOGOS}
+        heading={SOURCES_HEADING}
+      />
+      <NewsCarousel
+        version={CIRCULAR_CAROUSEL_TYPE}
+        data={NEWS_CATEGORIES_FILTER}
+        heading={CATEGORIES_HEADING}
+        noImage={true}
+      />
     </div>
   );
 };
