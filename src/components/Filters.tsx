@@ -10,7 +10,7 @@ interface FiltersProps {
   domain?: string;
   category?: string;
   q?: string;
-  [key: string]: any; // For other additional dynamic props that you might pass via {...params}
+  [key: string]: any;
 }
 
 const Filters: React.FC<FiltersProps> = ({
@@ -36,7 +36,7 @@ const Filters: React.FC<FiltersProps> = ({
       updatedFilters.domain = source?.replaceAll(" ", "")?.toLowerCase();
 
     setFilters(updatedFilters);
-  }, [categoryFilter, filters, setFilters, source]);
+  }, [categoryFilter, source]);
 
   // Rendering the Filters component
   return showFilters ? (
