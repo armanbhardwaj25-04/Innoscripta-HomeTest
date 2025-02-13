@@ -11,6 +11,7 @@
   flex-direction: row;
   gap: 2rem;
   padding: 10px 10rem;
+  flex-wrap: wrap;
 }
 
 /* Navigation Items */
